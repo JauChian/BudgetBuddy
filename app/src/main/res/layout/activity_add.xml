@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".Add">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btn_previous"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icn_back" />
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2nd Oct 2024"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/btn_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icn_next" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="Expense Title"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="What you spent?"
+        android:inputType="text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="Amount"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="How much you spent?"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="Category"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/cat"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Select category below"
+        android:inputType="numberDecimal"
+        android:enabled="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:id="@+id/cat_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:src="@drawable/pic_shop" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Shopping" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cat_commute"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:src="@drawable/pic_car" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Commute" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cat_food"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:src="@drawable/pic_food" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Food" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cat_living"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:src="@drawable/pic_house" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Living" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cat_other"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:src="@drawable/pic_other" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Other" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_btn_add"
+            android:layout_margin="10dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Add   " />
+        <TextView
+            android:id="@+id/btn_cnecel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_btn_cancel"
+            android:layout_margin="10dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>
